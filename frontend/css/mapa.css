@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #eef2ff, #f8faff);
+}
+
+
+.top-header {
+  height: 120px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* LOGOS */
+.header-left img {
+  height: 95px;
+}
+
+.header-right img {
+  height: 115px;
+}
+
+/* CENTRO */
+.header-center {
+  flex: 1;
+  text-align: center;
+}
+
+/* TÍTULO GRANDE */
+.header-center h1 {
+  font-size: 34px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+/* SUBTÍTULO */
+.header-center p {
+  font-size: 16px;
+  color: #6b7280;
+  margin-top: 5px;
+}
+
+/* CONTAINER */
+.container {
+  display: flex;
+  height: calc(100vh - 70px);
+}
+
+/* MAPA */
+#map {
+  flex: 2;
+  height: 100%;
+  border-radius: 20px;
+  margin: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+}
+
+/* SIDEBAR MODERNA */
+.sidebar {
+  flex: 1;
+  margin: 20px 20px 20px 0;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+  overflow-y: auto;
+}
+
+/* SELECT MODERNO */
+select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: #f1f4ff;
+  margin-bottom: 15px;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+select:focus {
+  outline: none;
+  background: #e4e9ff;
+}
+
+/* FILTRO EMOJI */
+.rating-filter {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.rating-filter button {
+  flex: 1;
+  font-size: 22px;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  background: #f1f4ff;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.rating-filter button:hover {
+  transform: scale(1.1);
+}
+
+.rating-filter .active {
+  background: linear-gradient(90deg, #6c8cff, #8ea2ff);
+  color: white;
+}
+
+/* CARDS DE REVIEW */
+.review {
+  display: flex;
+  gap: 12px;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: 0.2s;
+}
+
+.review:hover {
+  transform: translateY(-3px);
+}
+
+.review img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.review strong {
+  font-size: 14px;
+}
+
+.review p {
+  font-size: 13px;
+  color: #555;
+}
+
+/* EMOJI GRANDE */
+.emoji {
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+/* BOTÃO MODERNO */
+button {
+  transition: 0.2s;
+}
+
+button:hover {
+  opacity: 0.9;
+}

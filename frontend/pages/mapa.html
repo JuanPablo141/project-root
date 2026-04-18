@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Ser Educacional - Avaliações</title>
+
+  <link rel="stylesheet" href="../css/mapa.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="top-header">
+
+  <div class="header-left">
+    <img src="../assets/logouninassau.PNG" alt="Uninassau">
+  </div>
+
+  <div class="header-center">
+    <h1>Encontre seu bloco</h1>
+    <p>Mapa de satisfação por bloco</p>
+  </div>
+
+  <div class="header-right">
+    <img src="../assets/logo.PNG" alt="Ser Educacional">
+  </div>
+
+</header>
+
+<div class="container">
+
+  <div id="map"></div>
+
+  <div class="sidebar">
+
+    <div class="filters">
+      <label>Faculdade</label>
+      <select id="faculdade"></select>
+
+      <label>Curso</label>
+      <select id="curso"></select>
+
+      <label>Avaliação</label>
+     <div class="rating-filter">
+  <button data-rating="1">😭</button>
+  <button data-rating="2">😐</button>
+  <button data-rating="3">🙂</button>
+  <button data-rating="4">😀</button>
+  <button data-rating="5" class="active">😍</button>
+</div>
+
+    <h3>Avaliações dos Usuários</h3>
+
+    <div class="reviews-container"></div>
+
+</div>
+
+<script src="../js/mapa.js"></script>
+
+<script async
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrAw3KsRsCw1t5iTiMqvyVyv_jkjlM0pM&callback=initMap">
+</script>
+
+</body>
+</html>
