@@ -1,1 +1,59 @@
 
+<<<<<<< HEAD
+=======
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entrar | Avaliação de cursos</title>
+  <link rel="stylesheet" href="../css/tela-de-login.css">
+</head>
+<body>
+  <div class="container">
+    <div class="left"></div>
+
+    <div class="right">
+      <div class="login-box">
+        <img src="../assets/logo.png" class="logo" alt="Logo do sistema">
+
+        <h2>Informe sua matrícula</h2>
+
+        <form id="formLogin" novalidate>
+          <label for="login">Login:</label>
+          <input type="text" id="login" name="login" placeholder="Digite sua matrícula">
+          <span class="erro" id="erro-login"></span>
+
+          <label for="senha">Senha:</label>
+          <div class="senha-container">
+            <input type="password" id="senha" name="senha" placeholder="Digite sua senha">
+            <button type="button" id="toggleSenha" class="toggle-senha">Mostrar</button>
+          </div>
+          <span class="erro" id="erro-senha"></span>
+
+          <button type="submit" id="btnLogin" disabled>Entrar</button>
+        </form>
+
+        <div class="links">
+          <div class="link-item">
+            <span class="link-text">Não sabe sua senha?</span>
+            <button type="button" class="action-link" id="btnRecuperarAcesso">
+              Recupere seu acesso.
+            </button>
+          </div>
+
+          <div class="link-item">
+            <span class="link-text">Desejo trocar a senha.</span>
+            <button type="button" class="action-link" id="btnRedefinirSenha">
+              Redefina sua senha.
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/tela-de-login.js"></script>
+</body>
+</html>
+>>>>>>> 2758006 (Estrutura corrigida e arquivos atualizados)
