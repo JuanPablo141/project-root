@@ -94,32 +94,7 @@ select:focus {
   background: #e4e9ff;
 }
 
-/* FILTRO EMOJI */
-.rating-filter {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-}
 
-.rating-filter button {
-  flex: 1;
-  font-size: 22px;
-  padding: 10px;
-  border-radius: 12px;
-  border: none;
-  background: #f1f4ff;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.rating-filter button:hover {
-  transform: scale(1.1);
-}
-
-.rating-filter .active {
-  background: linear-gradient(90deg, #6c8cff, #8ea2ff);
-  color: white;
-}
 
 /* CARDS DE REVIEW */
 .review {
