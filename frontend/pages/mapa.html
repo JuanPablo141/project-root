@@ -5,7 +5,7 @@
   <title>Ser Educacional - Avaliações</title>
 
   <link rel="stylesheet" href="../css/mapa.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="../js/mapa.js" defer></script>
 </head>
 <body>
 
@@ -24,15 +24,39 @@
 
 <div class="container">
 
-  <div id="map"></div>
+ <div id="map">
+
+  <button class="bloco" style="top: 25%; left: 30%;">A</button>
+
+  <button class="bloco" style="top: 80%; left: 45%;">B</button>
+
+  <button class="bloco" style="top: 45%; left: 32%;">C</button>
+
+  <button class="bloco" style="top: 50%; left: 45%;">D</button>
+
+  <button class="bloco" style="top: 85%; left: 30%;">E</button>
+
+  <button class="bloco" style="top: 80%; left: 55%;">F</button>
+
+  <button class="bloco" style="top: 65%; left: 27%;">G</button>
+
+</div>
 
   <div class="sidebar">
 
     <div class="filters">
       <label>Blocos</label>
-      <select id="bloco">
-        <option value="" selected disabled>Selecione um bloco</option>
-      </select>
+    <select id="bloco">
+  <option value="" selected disabled>Selecione um bloco</option>
+
+  <option value="A">Bloco A</option>
+  <option value="B">Bloco B</option>
+  <option value="C">Bloco C</option>
+  <option value="D">Bloco D</option>
+  <option value="E">Bloco E</option>
+  <option value="F">Bloco F</option>
+  <option value="G">Bloco G</option>
+</select>
     </div>
 
     <h3>Avaliações dos Usuários</h3>
@@ -40,12 +64,6 @@
     <div class="reviews-container"></div>
 
 </div>
-
-<script src="../js/mapa.js"></script>
-
-<script async
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrAw3KsRsCw1t5iTiMqvyVyv_jkjlM0pM&callback=initMap">
-</script>
 
 </body>
 </html>
