@@ -22,12 +22,9 @@ body {
 
 /* LOGOS */
 .header-left img {
-  height: 95px;
-}
-
-.header-right img {
   height: 115px;
 }
+
 
 /* CENTRO */
 .header-center {
