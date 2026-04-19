@@ -16,7 +16,7 @@ function initMap() {
   });
 
   criarMarcadores();
-  popularFaculdades();
+  popularBlocos();
 }
 
 function criarMarcadores() {
@@ -85,8 +85,8 @@ function criarMarcadores() {
   });
 }
 
-function popularFaculdades() {
-  const select = document.getElementById("faculdade");
+function popularBlocos() {
+  const select = document.getElementById("bloco");
 
   faculdades.forEach(f => {
     const option = document.createElement("option");
