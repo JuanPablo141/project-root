@@ -1,16 +1,12 @@
 const faculdades = [
-  { nome: "UNINASSAU Graças (Recife)", lat: -8.047, lng: -34.89 },
-  { nome: "UNINASSAU Boa Viagem (Recife)", lat: -8.125, lng: -34.904 },
-  { nome: "UNINASSAU Caxangá (Recife)", lat: -8.034, lng: -34.95 },
-  { nome: "UNINASSAU Paulista", lat: -7.94, lng: -34.87 },
-  { nome: "UNINASSAU Olinda", lat: -8.008, lng: -34.855 },
-  { nome: "UNINASSAU Cabo", lat: -8.29, lng: -35.03 },
-  { nome: "UNINASSAU Caruaru", lat: -8.283, lng: -35.976 },
-  { nome: "UNINASSAU Petrolina", lat: -9.389, lng: -40.503 },
-  { nome: "UNINASSAU Garanhuns", lat: -8.89, lng: -36.49 },
-  { nome: "UNINASSAU Carpina", lat: -7.85, lng: -35.25 }
+  { nome: "Bloco A", lat: -8.047, lng: -34.877 },
+  { nome: "Bloco B", lat: -8.0475, lng: -34.876 },
+  { nome: "Bloco C", lat: -8.048, lng: -34.875 },
+  { nome: "Bloco D", lat: -8.0485, lng: -34.874 },
+  { nome: "Bloco E", lat: -8.049, lng: -34.873 },
+  { nome: "Bloco F", lat: -8.0495, lng: -34.872 },
+  { nome: "Bloco G", lat: -8.050, lng: -34.871 }
 ];
-
 
 
 function initMap() {
