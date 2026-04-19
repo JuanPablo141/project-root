@@ -9,6 +9,7 @@ idna==3.11
 pydantic==2.12.5
 pydantic_core==2.41.5
 psycopg[binary]==3.3.3
+python-dotenv==1.2.2
 pwdlib[argon2]==0.3.0
 starlette==1.0.0
 typing-inspection==0.4.2

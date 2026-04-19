@@ -1,8 +1,12 @@
 import os
 from collections.abc import Generator
+from pathlib import Path
 
 import psycopg
+from dotenv import load_dotenv
 from psycopg import Connection
+
+load_dotenv(Path(__file__).resolve().parents[1] / ".env")
 
 
 def get_database_url() -> str:
