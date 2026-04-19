@@ -1,4 +1,9 @@
 from psycopg import Connection
+from psycopg.errors import UniqueViolation
+
+
+class DuplicateEmailRepositoryError(Exception):
+    pass
 
 
 def email_exists(connection: Connection, email: str) -> bool:
@@ -42,7 +47,10 @@ def create_user(
     """
 
     with connection.cursor() as cursor:
-        cursor.execute(query, (nome, email, senha_hash, id_curso))
+        try:
+            cursor.execute(query, (nome, email, senha_hash, id_curso))
+        except UniqueViolation as exc:
+            raise DuplicateEmailRepositoryError from exc
         row = cursor.fetchone()
 
     if row is None:

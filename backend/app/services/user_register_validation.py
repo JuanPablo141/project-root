@@ -20,7 +20,7 @@ def _validate_nome(nome: str) -> None:
     if _is_blank(nome):
         raise UserRegisterValidationError("nome e obrigatorio")
 
-    if any(not (char.isalpha() or char.isspace()) for char in nome):
+    if any(not (char.isalpha() or char == " ") for char in nome):
         raise UserRegisterValidationError("nome deve conter apenas letras e espacos")
 
 

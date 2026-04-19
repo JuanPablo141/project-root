@@ -1,6 +1,11 @@
 from psycopg import Connection
 
-from app.respositories.user_register_repository import create_user, course_exists, email_exists
+from app.respositories.user_register_repository import (
+    DuplicateEmailRepositoryError,
+    create_user,
+    course_exists,
+    email_exists,
+)
 from app.schemas.user_register import UserRegisterInput
 from app.services.password_hasher import hash_password
 from app.services.user_register_validation import validate_user_register_business_rules
@@ -29,10 +34,13 @@ def register_user(connection: Connection, payload: UserRegisterInput) -> int:
 
     senha_hash = hash_password(payload.senha)
 
-    return create_user(
-        connection,
-        nome=payload.nome,
-        email=payload.email,
-        senha_hash=senha_hash,
-        id_curso=payload.id_curso,
-    )
+    try:
+        return create_user(
+            connection,
+            nome=payload.nome,
+            email=payload.email,
+            senha_hash=senha_hash,
+            id_curso=payload.id_curso,
+        )
+    except DuplicateEmailRepositoryError as exc:
+        raise UserAlreadyExistsError() from exc
