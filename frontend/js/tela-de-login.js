@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 const formLogin = document.getElementById("formLogin");
 const login = document.getElementById("login");
 const senha = document.getElementById("senha");
@@ -209,4 +206,3 @@ formLogin.addEventListener("submit", async (e) => {
     atualizarBotao();
   }
 });
->>>>>>> 2758006 (Estrutura corrigida e arquivos atualizados)
