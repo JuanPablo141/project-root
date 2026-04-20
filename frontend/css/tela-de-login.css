@@ -45,17 +45,23 @@ body {
   max-width: 600px;
   min-height: 400px;
   background: #ffffff;
-  padding: 56px 40px;
-  border-radius: 20px;
+  padding: 40px;
+  border-radius: 16px;
   margin-bottom: 18px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
+/* LOGO */
+.logo-login {
+  display: block;
+  width: 180px;
+  margin: 0 auto 30px auto;
+}
 
 /* TÍTULO */
 h2 {
   text-align: center;
-  font-size: 20px;
+  font-size: 25px;
   color: #2f3550;
   margin-bottom: 18px;
 }
@@ -104,7 +110,7 @@ input:focus {
   margin-top: 6px;
   border: none;
   border-radius: 12px;
-  background: linear-gradient(to right, #7cc8ff, #5baeff);
+  background: linear-gradient(to right, #7fd3ff, #5ecbff);
   color: #ffffff;
   font-size: 16px;
   font-weight: bold;
@@ -112,7 +118,12 @@ input:focus {
   transition: 0.2s;
 }
 
-/* LINKS */
+#btnLogin:hover {
+  transform: scale(1.03);
+  background: linear-gradient(to right, #3aa0f3, #0096d6);
+}
+
+/* LINKS */ 
 .links {
   margin-top: 16px;
   text-align: center;
@@ -184,6 +195,11 @@ input:focus {
     padding: 20px 18px;
     border-radius: 18px;
   }
+
+.logo {
+  width: 120px;
+  margin-bottom: 10px;
+}
 
   h2 {
     font-size: 18px;
