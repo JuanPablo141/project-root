@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- LADO ESQUERDO -->
+  <div class="left">
+
+    <img src="background.jpeg">
+  </div>
+
+  <!-- LADO DIREITO -->
+  <div class="right">
+
+    <div class="card">
+
+      <div class="logo">
+        <img src="logouninassau.png">
+       
+      </div>
+
+      <h3>Crie sua conta</h3>
+
+      <label>Nome completo</label>
+      <input type="text" id="nome" placeholder="Digite seu nome">
+
+      <label>Matrícula</label>
+      <input type="text" id="matricula" placeholder="Digite sua matrícula">
+
+      <label>Email</label>
+      <input type="email" id="email" placeholder="Digite seu email">
+
+      <label>Senha</label>
+      <div class="senha-box">
+        <input type="password" id="senha" placeholder="Digite sua senha">
+        <span onclick="toggleSenha()">Mostrar</span>
+      </div>
+
+      <label>Confirmar senha</label>
+      <input type="password" id="confirmarSenha" placeholder="Confirme a senha">
+
+      <button onclick="cadastrar()">Cadastrar</button>
+
+      <div class="links">
+        <p>Já possui conta? <a href="#">Entrar</a></p>
+      </div>
+
+      <p id="mensagem"></p>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
