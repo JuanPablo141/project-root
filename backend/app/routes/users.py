@@ -1,0 +1,37 @@
+from typing import Annotated
+
+from fastapi import APIRouter, Depends, HTTPException, status
+from psycopg import Connection
+
+from app.dependencies import get_db_connection
+from app.schemas.user_register import UserRegisterInput
+from app.services.user_register_service import CourseNotFoundError, UserAlreadyExistsError, register_user
+from app.services.user_register_validation import UserRegisterValidationError
+
+router = APIRouter(prefix="/users", tags=["users"])
+
+
+@router.post(
+    "/register",
+    status_code=status.HTTP_201_CREATED,
+    summary="Cadastrar usuario",
+    responses={
+        400: {"description": "Erro de validacao de negocio"},
+        404: {"description": "Curso nao encontrado"},
+        409: {"description": "Email ja cadastrado"},
+    },
+)
+def register_user_endpoint(
+    payload: UserRegisterInput,
+    connection: Annotated[Connection, Depends(get_db_connection)],
+):
+    try:
+        register_user(connection, payload)
+    except UserRegisterValidationError as exc:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=exc.detail) from exc
+    except CourseNotFoundError as exc:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=exc.detail) from exc
+    except UserAlreadyExistsError as exc:
+        raise HTTPException(status_code=status.HTTP_409_CONFLICT, detail=exc.detail) from exc
+
+    return {"message": "usuario cadastrado com sucesso"}
